@@ -1,10 +1,10 @@
 import React, { createContext } from "react";
 import useFirebase from "../useFirebase";
 
-const AutheProvider = (props) => {
-    const { children } = props;
-    const AuthContext = createContext();
+export const AuthContext = createContext();
+const AutheProvider = ({ children }) => {
     const allContext = useFirebase();
+    // const { children } = props;destructure code
     return (
         <AuthContext.Provider value={allContext}>
             {children}

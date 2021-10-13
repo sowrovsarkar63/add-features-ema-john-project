@@ -13,7 +13,7 @@ const Header = () => {
                 <NavLink to="/shop">Shop</NavLink>
                 <NavLink to="/review">Order Review</NavLink>
                 <NavLink to="/inventory">Manage Inventory</NavLink>
-                {user.email ? (
+                {user.displayName ? (
                     <button onClick={logoutUser}>Logout</button>
                 ) : (
                     <NavLink to="/login">Login</NavLink>
